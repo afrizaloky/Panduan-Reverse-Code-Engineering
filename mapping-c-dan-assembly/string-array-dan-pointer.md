@@ -21,10 +21,10 @@ $ gdb -batch -ex 'file array' -ex 'disas main'
 Dump of assembler code for function main:
    0x0000000000400497 <+0>:     push   rbp
    0x0000000000400498 <+1>:     mov    rbp,rsp
-   0x000000000040049b <+4>:     mov    DWORD PTR [rbp-0x10],0xa
-   0x00000000004004a2 <+11>:    mov    DWORD PTR [rbp-0xc],0x14
-   0x00000000004004a9 <+18>:    mov    DWORD PTR [rbp-0x8],0x1e
-   0x00000000004004b0 <+25>:    mov    DWORD PTR [rbp-0x4],0x28
+   0x000000000040049b <+4>:     mov    DWORD PTR [rbp-0x10],0xa //rbp-16 bergantung tipe data
+   0x00000000004004a2 <+11>:    mov    DWORD PTR [rbp-0xc],0x14 //rbp-12
+   0x00000000004004a9 <+18>:    mov    DWORD PTR [rbp-0x8],0x1e //rbp-8
+   0x00000000004004b0 <+25>:    mov    DWORD PTR [rbp-0x4],0x28 //rbp-4
    0x00000000004004b7 <+32>:    mov    eax,0x0
    0x00000000004004bc <+37>:    pop    rbp
    0x00000000004004bd <+38>:    ret    
